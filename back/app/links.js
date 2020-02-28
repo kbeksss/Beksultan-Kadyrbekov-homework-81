@@ -5,12 +5,6 @@ const router = express.Router();
 
 const Link = require('../models/Link');
 
-
-router.get('/links', async (req, res) => {
-    const links = await Link.find();
-    res.send(links);
-});
-
 router.post('/links', async (req, res) => {
     const linkData = req.body;
 
