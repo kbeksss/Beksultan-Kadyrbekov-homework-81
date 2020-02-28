@@ -4,9 +4,9 @@ import {Button, Container, Form, Input, InputGroup} from "reactstrap";
 import {getShortLink, linkChange} from "../../store/actions/urlActions";
 
 const Main = props => {
-    const postOriginalLink = async (e) => {
+    const postOriginalLink = (e) => {
         e.preventDefault();
-        await props.getShortLink({link: props.myLink});
+        props.getShortLink({link: props.myLink});
     };
     return (
         <Container className='text-center'>
